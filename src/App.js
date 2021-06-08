@@ -1,8 +1,14 @@
 import "./App.css";
-import { getData } from "./getData";
+import React from "react";
+import Settings from "./settings";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <h1 className="header">The Big Fact Hunt</h1>
+      <Settings />
+    </div>
+  );
 }
 
 export default App;
