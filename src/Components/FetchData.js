@@ -5,14 +5,14 @@ function HandleFetch() {
 
   // useEffect hook
   useEffect(() => {
-    const apiUrl = `https://opentdb.com/api.php?amount=30&category=11&difficulty=easy&encode=url3986`;
+    const apiUrl = `https://opentdb.com/api.php?amount=30&category=11&difficulty=easy`;
 
     fetch(apiUrl)
       .then((res) => res.json())
       .then((response) => {
-        setQuizData(response.data);
+        setQuizData(response.results);
       });
-  }, [setQuizData]);
-  return <div></div>;
+  });
+  return <div>{}</div>;
 }
 export default HandleFetch;
