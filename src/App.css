@@ -1,23 +1,29 @@
+html,
+body,
+#root {
+  height: 100%;
+}
 .App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+.App .card {
+  max-width: 400px;
+  width: 100%;
   text-align: center;
-  background-color: rgb(44, 44, 44);
-  margin: 20%;
-  padding: 12%;
-  width: fit-content;
-  color: rgb(255, 255, 255);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
-.topic {
+label.radio {
+  display: block;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 5px;
   font-size: 20px;
-  font-weight: 100;
 }
-
-.header {
-  font-size: 60px;
+label.radio + .radio {
+  margin-left: 0;
 }
-
-.start {
-  margin: 10%;
-  border: none;
+label.radio input {
+  margin-right: 10px;
 }
