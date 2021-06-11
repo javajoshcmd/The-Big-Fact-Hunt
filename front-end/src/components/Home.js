@@ -47,26 +47,56 @@ useEffect(()=>{
 })
 }, [])
 
+    
+let log = ()=>{
+    const x = document.getElementById('top-form');
+    const y = document.getElementById('bttm-form');
+    const z = document.getElementById('btn');
+    x.style.left = '50px';
+    y.style.left = '450px';
+    z.style.left = '0px'
+    
+}
+
+let reg =()=>{
+    const x = document.getElementById('top-form');
+    const y = document.getElementById('bttm-form');
+    const z = document.getElementById('btn');
+    x.style.left = '-400px';
+    y.style.left = '50px';
+    z.style.left = '110px'
+}
+
     return(
+
+        <div className='app'>
+
+        
         <div className='home'>
-            <div className='reg'>
+            <div className='button-box'>
+                <div id='btn'></div>
+                <button type='button' className='toggle-btn' onClick={log}>Log In</button>
+                <button type='button' className='toggle-btn' onClick={reg}>Register</button>
+            </div>
+            <div id='top-form' className='login'>
+                <h1>Login</h1>
+                <input type='text' placeholder='Username...'  onChange={(e)=>{setUsername(e.target.value)}}/>
+                <input type='text' placeholder='Password...'  onChange={(e)=>{setPassword(e.target.value)}}/>
+                <button onClick={login} className='form-btn'>Login</button>
+            </div>
+
+
+            <div id='bttm-form' className='reg'>
                 <h1>Registration</h1>
                 <label>Username</label>
                 <input type='text' onChange={(e)=>{setUsernameReg(e.target.value)}}/>
                 <label>Password</label>
                 <input type='text' onChange={(e)=>{setPasswordReg(e.target.value)}}/>
-                <button onClick={register}>Register</button>
+                <button onClick={register} className='form-btn'>Register</button>
             </div>
 
-
-            <div className='login'>
-                <h1>Login</h1>
-                <input type='text' placeholder='Username...'  onChange={(e)=>{setUsername(e.target.value)}}/>
-                <input type='text' placeholder='Password...'  onChange={(e)=>{setPassword(e.target.value)}}/>
-                <button onClick={login}>Login</button>
-            </div>
-            
-            <h1>User: {loginStatus}</h1>
+         </div>
+        <h1 id='user-name'>{`user:${loginStatus}`}</h1>
         </div>
     )
 }
