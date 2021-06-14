@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
-import HandleFetch from "./Components/FetchData";
+import "./Components/Quiz.css";
+import Quiz from "../src/Components/Quiz";
 
-const App = () => {
+function App() {
   return (
     <div className="App">
-      <p> hello</p>
-      <HandleFetch />
+      <h1 className="Header">The Big Fact Hunt</h1>
+      <Quiz />
     </div>
   );
-};
+}
+
 export default App;

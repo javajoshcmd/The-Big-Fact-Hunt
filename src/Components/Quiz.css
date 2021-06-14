@@ -1,0 +1,17 @@
+.App {
+  align-items: center;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 5%;
+  background-color: #131212;
+  color: #ffffff;
+  align-content: space-between;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+}
+.Header {
+  font-size: 100px;
+  font-weight: 300;
+}
